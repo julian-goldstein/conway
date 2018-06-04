@@ -6,8 +6,10 @@
 #include <unistd.h>
 #include <sys/ioctl.h>
 #include <sys/types.h>
+
 typedef uint8_t cell_t;
 typedef uint8_t cell_action_t;
+
 typedef struct universe {
     struct ttysize ts;
     cell_action_t* cell_action;
@@ -181,7 +183,6 @@ void play() {
 
 
 int main() {
-     
     init_conway();
     play();
     return 0;
